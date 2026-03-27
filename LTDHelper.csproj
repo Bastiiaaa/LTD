@@ -10,6 +10,7 @@
     <SelfContained>true</SelfContained>
     <PublishSingleFile>true</PublishSingleFile>
     <EnableWindowsTargeting>true</EnableWindowsTargeting>
+    <BaseIntermediateOutputPath>obj\LTDHelper\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>12.0</LangVersion>
