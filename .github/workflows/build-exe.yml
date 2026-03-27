@@ -29,13 +29,13 @@ jobs:
         run: dotnet --info
 
       - name: Restore Geode
-        run: dotnet restore Geode.csproj -p:BaseIntermediateOutputPath=obj/Geode/ -p:MSBuildProjectExtensionsPath=obj/Geode/
+        run: dotnet restore Geode.csproj
 
       - name: Restore LTDHelper (win-x86)
-        run: dotnet restore LTDHelper.csproj -r win-x86 -p:BaseIntermediateOutputPath=obj/LTDHelper/ -p:MSBuildProjectExtensionsPath=obj/LTDHelper/
+        run: dotnet restore LTDHelper.csproj -r win-x86
 
       - name: Publish LTDHelper as win-x86 EXE
-        run: dotnet publish LTDHelper.csproj -c Release -r win-x86 --no-restore -p:BaseIntermediateOutputPath=obj/LTDHelper/ -p:MSBuildProjectExtensionsPath=obj/LTDHelper/
+        run: dotnet publish LTDHelper.csproj -c Release -r win-x86
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4
