@@ -3,6 +3,7 @@
     <AssemblyName>LTDHelper</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <OutputType>WinExe</OutputType>
+    <StartupObject>LTDHelper.SingleInstance</StartupObject>
     <UseWPF>True</UseWPF>
     <TargetFramework>net5.0-windows</TargetFramework>
     <PlatformTarget>x86</PlatformTarget>
