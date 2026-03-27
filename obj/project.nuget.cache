@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "W1X/YWmEc7w=",
+  "success": true,
+  "projectFilePath": "/home/runner/work/LTD/LTD/LTDHelper.csproj",
+  "expectedPackageFiles": [
+    "/tmp/codeql-scratch-d2dccf1a9fd9f4d1/dbs/csharp/working/packages/microsoft.netcore.app.ref/5.0.0/microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "/tmp/codeql-scratch-d2dccf1a9fd9f4d1/dbs/csharp/working/packages/microsoft.windowsdesktop.app.ref/5.0.0/microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "/tmp/codeql-scratch-d2dccf1a9fd9f4d1/dbs/csharp/working/packages/microsoft.aspnetcore.app.ref/5.0.0/microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
