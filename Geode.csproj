@@ -11,8 +11,5 @@
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup />
-  <ItemGroup>
-    <Compile Include="Properties/AssemblyInfo.cs" />
-  </ItemGroup>
   <ItemGroup />
 </Project>
