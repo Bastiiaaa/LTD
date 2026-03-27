@@ -43,7 +43,7 @@ jobs:
         run: dotnet restore LTDHelper.csproj -r win-x86 --force
 
       - name: Publish LTDHelper as win-x86 EXE
-        run: dotnet publish LTDHelper.csproj -c Release -r win-x86
+        run: dotnet publish LTDHelper.csproj -c Release -r win-x86 --no-restore
 
       - name: Upload EXE artifact
         uses: actions/upload-artifact@v4

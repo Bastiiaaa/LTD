@@ -4,7 +4,6 @@
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <TargetFramework>net5.0</TargetFramework>
     <PlatformTarget>x86</PlatformTarget>
-    <BaseIntermediateOutputPath>obj\Geode\</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>12.0</LangVersion>
