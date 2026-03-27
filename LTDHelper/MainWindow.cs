@@ -148,7 +148,7 @@ public partial class MainWindow : Window, IComponentConnector
 				Extension.SendToServerAsync(Extension.Out.GetCatalogPage, hCatalogNode2.PageId, -1, "NORMAL");
 				await Task.Delay(new Random().Next(500, 1000));
 				ConsoleBot.BotSendMessage(AppTranslator.TryingToBuy[CurrentLanguageInt]);
-				Extension.SendToServerAsync(Extension.Out.PurchaseFromCatalog, hCatalogNode2.PageId, hCatalogNode2.OfferIds[0], "", 1);
+				Extension.SendToServerAsync(Extension.Out.PurchaseFromCatalog, hCatalogNode2.PageId, hCatalogNode2.OfferIds[0], "", 3);
 				if (await Extension.WaitForPacketAsync(Extension.In.PurchaseOK, 2000) == null)
 				{
 					throw new Exception("LTD not purchased!");
