@@ -35,9 +35,12 @@ jobs:
           Remove-Item -Recurse -Force bin -ErrorAction SilentlyContinue
           Remove-Item -Recurse -Force LTDHelper/obj -ErrorAction SilentlyContinue
           Remove-Item -Recurse -Force LTDHelper/bin -ErrorAction SilentlyContinue
-
-      - name: Restore Geode
-        run: dotnet restore Geode.csproj --force
+      - name: Validate Geode.dll exists
+        shell: pwsh
+        run: |
+          if (!(Test-Path Geode.dll)) {
+            throw "Missing Geode.dll in repository root. Add Geode.dll next to LTDHelper.csproj and rerun workflow."
+          }
 
       - name: Restore LTDHelper (win-x86)
         run: dotnet restore LTDHelper.csproj -r win-x86 --force

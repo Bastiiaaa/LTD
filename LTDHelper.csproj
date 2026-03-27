@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>LTDHelper</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
@@ -20,6 +20,8 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="Geode.csproj" />
+    <Reference Include="Geode">
+      <HintPath>Geode.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
