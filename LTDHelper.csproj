@@ -2,9 +2,14 @@
   <PropertyGroup>
     <AssemblyName>LTDHelper</AssemblyName>
     <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
     <UseWPF>True</UseWPF>
-    <TargetFramework>netcoreapp5.0</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
     <PlatformTarget>x86</PlatformTarget>
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <PublishSingleFile>true</PublishSingleFile>
+    <EnableWindowsTargeting>true</EnableWindowsTargeting>
   </PropertyGroup>
   <PropertyGroup>
     <LangVersion>12.0</LangVersion>
@@ -15,8 +20,6 @@
   </PropertyGroup>
   <ItemGroup />
   <ItemGroup>
-    <Reference Include="Geode">
-      <HintPath>Geode.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="Geode.csproj" />
   </ItemGroup>
 </Project>

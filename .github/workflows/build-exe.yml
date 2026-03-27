@@ -1,0 +1,36 @@
+name: Build Windows EXE
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build-exe:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 5 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 5.0.x
+
+      - name: Restore
+        run: dotnet restore LTD.sln
+
+      - name: Publish LTDHelper as win-x86 EXE
+        run: dotnet publish LTDHelper.csproj -c Release -r win-x86
+
+      - name: Upload EXE artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: LTDHelper-win-x86
+          path: bin/Release/net5.0-windows/win-x86/publish/LTDHelper.exe
+          if-no-files-found: error
